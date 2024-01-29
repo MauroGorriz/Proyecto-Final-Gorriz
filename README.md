@@ -7,6 +7,7 @@ Pagina Web informativa y con posterior uso para venta de bombas hidraulicas.
 
 ## Version
 1.0
+
 ## Descripción del proyecto
 El proyecto se basa en mis estudios de ingeniería donde utilice conceptos para intentar de informar a un publico general. Con informacion simple, demostraciones de funcionamiento (GIF), muchos botones para redirigir, etc.
 Intente hacer el diseño lo más friendly-user posible.
@@ -26,6 +27,9 @@ El unico inconveniente que he tenido ha sido con los avatares de usuario, no log
 *Hace dias que vengo probando migrar todo de nuevo y no logro encontrar la solucion, sospecho que realizar el proyecto desde cero y no desde otro seria lo ideal. Pero por una cuestion de tiempos no logre hacerlo.
 
 De todos modos, considero que ese pequeño bug no es tan relevante. Logre configurar todo, que se guarden los archivos media, hasta que se muestre la imagen del avatar; es un problema con el URL de las mismas.
+
+## Video Explicativo
+https://www.youtube.com/watch?v=pRU5zr3kgQQ
 
 ## Tecnologia Utilizada
 
