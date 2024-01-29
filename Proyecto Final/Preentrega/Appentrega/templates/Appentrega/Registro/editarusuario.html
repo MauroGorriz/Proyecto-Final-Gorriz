@@ -1,0 +1,18 @@
+{% extends 'Appentrega/padre.html'%}
+{% load static %}
+{% block 1 %}
+{% endblock %}
+{% block 2 %}
+
+{% endblock %}
+{% block 3 %}{% endblock %}
+##Tema claro
+{% block 5 %}<p>Actualización de Usuarios</p>{% endblock %}
+{% block 6 %}
+<form action="" method="POST"> {%csrf_token%}
+    {% csrf_token %}
+    {{ form_e.as_p }}
+    <button type="submit">Actualizar</button>
+</form>
+{% endblock %}
+{% block 7 %}{% endblock %}

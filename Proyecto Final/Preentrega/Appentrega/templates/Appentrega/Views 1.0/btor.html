@@ -1,0 +1,17 @@
+{% extends 'Appentrega/padre.html'%}
+{% load static %}
+{% block 1 %}Bombas de Tornillo{% endblock %}
+{% block 2 %}Esta bomba utiliza un tornillo helicoidal excéntrico que se mueve dentro de una camisa y hace fluir el líquido entre el tornillo y la camisa.{% endblock %}
+{% block 3 %}<div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="https://i.makeagif.com/media/5-04-2016/S6DUsE.gif" alt="" /></div>
+</div>{% endblock %}
+{% block 4 %}{% endblock %}
+{% block 5 %}{% endblock %}
+{% block 6 %}Agregue Bombas de Tornillo con el siguiente formulario:{% endblock %}
+{% block 7 %}<form action="" method="POST"> {% csrf_token %}
+
+    {{MiFormulario2.as_p}}
+
+    <input type="submit" value="Guardar">
+
+</form>
+{% endblock %}

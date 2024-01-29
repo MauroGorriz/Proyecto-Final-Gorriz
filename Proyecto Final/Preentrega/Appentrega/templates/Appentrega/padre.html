@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        {% load static %}
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Modern Business - Start Bootstrap Template</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'Appentrega/css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body class="d-flex flex-column h-100">
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container px-5">
+                    <a class="btn btn-success --bs-btn-bg: #34e204 btn-lg px-2 me-sm-2" href="{% url 'Inicio'%}">Inicio</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-5 mb-lg-0">
+                            <li class="nav-item dropdown">
+                            <ul class="navbar-nav ms-5 mb-5 mb-lg-0"></ul>
+                            {% if user.is_authenticated %}
+                            
+                            <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Agregar Bombas</a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
+                                <li><a class="dropdown-item" href="{% url 'BombasCentrifugas'%}">Bombas Centrífugas</a></li>
+                                <li><a class="dropdown-item" href="{% url 'BombasTornillo'%}">Bombas de Tornillo</a></li>
+                                <li><a class="dropdown-item" href="{% url 'BombasEngranaje'%}">Bombas de Engranajes</a></li>
+                            </ul>
+                            </li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'busqueda' %}">Busqueda de Bombas</a></li>
+                        <img src="{{user.avatar_set.last.imagen.url}}" height="40" width="40">
+                        <a class="btn btn-secondary --bs-btn-bg: #34e204 btn-lg px-2 me-sm-2" href="{% url 'editar'%}">Editar Perfil</a>
+                        <a class="btn btn-primary btn-lg px-1 me-sm-1" href="{% url 'logout' %}">Cerrar Sesión</a>
+                            {% else %}
+                            <a class="btn btn-primary btn-lg px-1 me-sm-1" href="{% url 'registro' %}">Registrarse</a>
+                            <a class="btn btn-primary btn-lg px-1 me-sm-1" href="{% url 'login' %}">Iniciar Sesión</a>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Header-->
+            <header class="bg-dark py-5">
+                <div class="container px-5">
+                    <div class="row gx-5 align-items-center justify-content-center">
+                        <div class="col-lg-8 col-xl-7 col-xxl-6">
+                            <div class="my-5 text-center text-xl-start">
+                                <h1 class="display-5 fw-bolder text-white mb-2">{% block 1 %}¿Que son las bombas y para que sirven?{% endblock %}</h1>
+                                <p class="lead fw-normal text-white-50 mb-2">{% block 2 %}Una bomba hidráulica es una máquina generadora que transforma la energía con la que es accionada en energía del fluido incompresible que mueve.{% endblock %}</p>
+                                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                                </div>
+                            </div>
+                        </div>
+                        {% block 3 %} <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="https://www.portalelectromecanico.org/CURSOS/BombasHidraulicas/img1.22.png" alt="" width="480" height="380" /></div>{% endblock %}
+                    </div>
+                </div>
+            </header>
+            <!-- Blog preview section-->
+            <section class="py-5">
+                <div class="container px-5 my-5">    
+                    <div class="row gx-5 justify-content-center">{% block 4 %}
+                        <div class="col-lg-8 col-xl-6">
+                            <div class="text-center">
+                                <h2 class="fw-bolder">{% block 5 %}Tipos de Bombas{% endblock %}</h2>
+                                <p class="lead fw-normal text-muted mb-5">{% block 6 %}En esta sección encontrara los tipos de bombas disponibles, como funcionan y sus prestaciones.{% endblock %}</p>
+                            </div>
+                        </div>
+                    </div>{% endblock %}
+                    {% block 7 %}<div class="row gx-5">
+                        <div class="col-lg-4 mb-5">
+                            <div class="card h-100 shadow border-0">
+                                <img class="card-img-top" src="https://cdn.shopify.com/s/files/1/1704/9851/files/ezgif.com-video-to-gif_large.gif?v=1582903935" alt="..." width="280" height="280" />
+                                <div class="card-body p-4">
+                                    <div class="badge bg-primary bg-gradient rounded-pill mb-2"></div>
+                                    <a class="text-decoration-none link-dark stretched-link" href=""><h5 class="card-title mb-3">Bombas centrífugas</h5></a>
+                                    <p class="card-text mb-0">El fluido entra por el centro del rodete o impulsor, que dispone de unos álabes para conducir el fluido, y por efecto de la fuerza centrífuga es impulsado hacia el exterior.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-5">
+                            <div class="card h-100 shadow border-0">
+                                <img class="card-img-top" src="https://i.makeagif.com/media/5-04-2016/S6DUsE.gif" alt="..." width="280" height="280"/>
+                                <div class="card-body p-4">
+                                    <div class="badge bg-primary bg-gradient rounded-pill mb-2"></div>
+                                    <a class="text-decoration-none link-dark stretched-link" href=""><h5 class="card-title mb-3">Bombas de tornillo</h5></a>
+                                    <p class="card-text mb-0">Esta bomba utiliza un tornillo helicoidal excéntrico que se mueve dentro de una camisa y hace fluir el líquido entre el tornillo y la camisa.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-5">
+                            <div class="card h-100 shadow border-0">
+                                <img class="card-img-top" src="https://www.firemiks.com/upl/images/686649.gif" alt="..." width="280" height="280"/>
+                                <div class="card-body p-4">
+                                    <div class="badge bg-primary bg-gradient rounded-pill mb-2"></div>
+                                    <a class="text-decoration-none link-dark stretched-link" href=""><h5 class="card-title mb-3">Bombas de engranajes</h5></a>
+                                    <p class="card-text mb-0">Consta de 2 engranajes encerrados en un alojamiento muy ceñido. Transforma la energía cinética en forma de par motor, generada por un motor, en energía hidráulica a través del caudal de aceite generado por la bomba.</p>
+                            </div>
+                        </div>
+                    </div>{% endblock %}
+                </div>
+            </section>
+        </main>
+        <!-- Footer-->
+        <footer class="bg-dark py-4 mt-auto">
+            <div class="container px-5">
+                <li class="btn btn-secondary btn-lg px-1 me-sm-1"><a class="nav-link" href="{% url 'sobremi' %}">Sobre Mi</a></li>
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; Mauro Gorriz 2024</div></div>
+                    <div class="col-auto">
+                        <a class="link-light small" href="#!">Privacy</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="#!">Terms</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="#!">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

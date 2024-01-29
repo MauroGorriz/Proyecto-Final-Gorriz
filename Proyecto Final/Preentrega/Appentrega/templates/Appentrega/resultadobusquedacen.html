@@ -1,0 +1,33 @@
+{% extends 'Appentrega/padre.html'%}
+{% load static %}
+{% block 1 %}<p>Los resultados de busqueda son:</p>
+{% endblock %}
+{% block 2 %}
+{% endblock %}
+{% block 3 %}{% endblock %}
+##Tema claro
+{% block 5 %}
+<h1>Modelos Disponibles</h1>
+<table class="rwd-table">
+  <tr>
+    <th>Modelo</th>
+    <th>Presion</th>
+    <th>Caudal</th>
+    <th>Altura</th>
+    <th>Temperatura</th>
+  </tr>
+  {% for x in DBusqueda1 %}
+  <tr>
+    <td data-th="Modelo">{{x.modelo}}</td>
+    <td data-th="Presion">{{x.presion}} psi</td>
+    <td data-th="Caudal">{{x.caudal}} m3/s</td>
+    <td data-th="Altura">{{x.altura}} m</td>
+    <td data-th="Temperatura">{{x.temp}} °C</td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock %}
+{% block 6 %}
+{% endblock %}
+{% block 7 %}{% endblock %}
+

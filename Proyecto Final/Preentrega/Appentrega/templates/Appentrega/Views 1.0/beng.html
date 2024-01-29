@@ -1,0 +1,18 @@
+{% extends 'Appentrega/padre.html'%}
+{% load static %}
+{% block 1 %}{% endblock %}
+{% block 2 %}<div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="https://www.firemiks.com/upl/images/686649.gif" alt="" /></div>
+</div>{% endblock %}
+{% block 3 %}Bombas de Engranajes{% endblock %}
+{% block 4 %}Consta de 2 engranajes encerrados en un alojamiento muy ceñido. Transforma la energía cinética en forma de par motor, generada por un motor, en energía hidráulica a través del caudal de aceite generado por la bomba.{% endblock %}
+{% block 6 %}Agregue Bombas de Engranajes con el siguiente formulario:{% endblock %}
+{% block 7 %}<form action="" method="POST"> {% csrf_token %}
+
+    {{MiFormulario2.as_p}}
+
+    <input type="submit" value="Guardar">
+
+</form>
+{% endblock %}
+{% block 8 %}{% endblock %}
+{% block 9 %}{% endblock %}

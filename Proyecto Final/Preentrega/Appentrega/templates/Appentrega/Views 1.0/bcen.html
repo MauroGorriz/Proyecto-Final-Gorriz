@@ -1,0 +1,18 @@
+{% extends 'Appentrega/padre.html'%}
+{% load static %}
+{% block 1 %}Bombas Centrífugas{% endblock %}
+{% block 2 %}<div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="https://cdn.shopify.com/s/files/1/1704/9851/files/ezgif.com-video-to-gif_large.gif?v=1582903935" alt="" /></div>
+</div>{% endblock %}
+{% block 3 %}{% endblock %}
+{% block 4 %}El fluido entra por el centro del rodete o impulsor, que dispone de unos álabes para conducir el fluido, y por efecto de la fuerza centrífuga es impulsado hacia el exterior.{% endblock %}
+{% block 6 %}Agregue Bombas Centrifugas con el siguiente formulario:{% endblock %}
+{% block 7 %}<form action="" method="POST"> {% csrf_token %}
+
+    {{MiFormulario.as_p}}
+
+    <input type="submit" value="Guardar">
+
+</form>
+{% endblock %}
+{% block 8 %}{% endblock %}
+{% block 9 %}{% endblock %}
