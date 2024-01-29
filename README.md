@@ -35,3 +35,5 @@ De todos modos, considero que ese pequeño bug no es tan relevante. Logre config
    
 4. Python
 5. Django
+
+PD: Superusuario: MauroG Pass: python123
